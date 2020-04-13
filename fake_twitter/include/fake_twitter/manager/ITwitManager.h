@@ -10,12 +10,10 @@ class ITwit;
 class ITwitManager : IManager {
 public:
     virtual ~ITwitManager() = 0;
-    virtual void save(const ITwit& twit) = 0;
-    virtual void load(ITwit& twit) = 0;
+    virtual ITwit create(const PKey& author, const std::string& body, const Date& date, const PKey* retwetedFrom) = 0;
+    virtual ITwit* loadByKey(const PKey& key) = 0;
     virtual void update(const ITwit& twit) = 0;
-    virtual void deleteTwit(ITwit twit) = 0;
-    virtual void retwit(ITwit twit) = 0;
-    virtual void deleteRetwit(ITwit twit) = 0;
+    virtual void drop(const ITwit& twit) = 0;
 };
 
 } // manager

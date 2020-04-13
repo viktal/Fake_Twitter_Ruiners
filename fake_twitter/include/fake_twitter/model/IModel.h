@@ -5,8 +5,6 @@
 namespace fake_twitter {
 namespace model {
 
-using PKey = int;
-using Date = std::chrono::steady_clock::time_point;
 
 class IModel {
 public:
