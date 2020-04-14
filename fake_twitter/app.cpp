@@ -1,5 +1,0 @@
-#include "fake_twitter/model/IModel.h"
-#include "fake_twitter/model/ITwit.h"
-#include "fake_twitter/manager/ITwitManager.h"
-#include "fake_twitter/model//IUser.h"
-#include "fake_twitter/manager/IUserManager.h"
