@@ -15,8 +15,6 @@ public:
 
     ~BasicTwit() override = default;
 
-    const std::shared_ptr<ITwitManager> manager() override;
-
     const PKey& author() override;
     void author(PKey) override;
 
@@ -41,6 +39,7 @@ private:
     size_t retwitCount_;
     PKey retwitedFrom_;
     Date date_;
+    static const size_t max_body_len = 280;
 };
 
 } // model

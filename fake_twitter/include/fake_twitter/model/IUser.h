@@ -5,15 +5,11 @@
 #include "fake_twitter/model/IModel.h"
 #include "fake_twitter/common.h"
 
-namespace fake_twitter {
-namespace model {
+namespace fake_twitter::model {
 
-class IUserManager;
-
-class IUser: IModel {
+class IUser: public IModel {
 public:
-    virtual std::shared_ptr<IUserManager> manager() = 0;
-
+    virtual ~IUser() = 0;
     virtual const bool& is_authorized() = 0;
     virtual void is_authorized(bool) = 0;
 
@@ -30,5 +26,4 @@ public:
     virtual void avatar(Avatar) = 0;
 };
 
-} // model
-} // fake_twitter
+} // fake_twitter::model

@@ -5,10 +5,6 @@
 using namespace fake_twitter::model;
 
 
-const std::shared_ptr<ITwitManager> BasicTwit::manager() {
-    return nullptr;
-}
-
 const fake_twitter::PKey& BasicTwit::author() {
     return author_;
 }
@@ -38,7 +34,9 @@ const std::string& BasicTwit::body() {
 }
 
 void BasicTwit::body(std::string body) {
-    body_=body;
+    if (body.length() > max_body_len)
+        throw std::invalid_argument(body);
+    body_ = body;
 }
 
 const fake_twitter::Date& BasicTwit::date() {

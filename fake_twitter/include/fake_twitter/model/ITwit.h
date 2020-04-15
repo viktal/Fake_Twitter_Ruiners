@@ -9,13 +9,9 @@
 namespace fake_twitter {
 namespace model {
 
-class ITwitManager;
-
 class ITwit : public IModel {
 public:
     virtual ~ITwit() = 0;
-    virtual const std::shared_ptr<ITwitManager> manager() = 0;
-
     virtual const PKey& author() = 0;
     virtual void author(PKey) = 0;
 
