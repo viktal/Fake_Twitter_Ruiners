@@ -5,9 +5,9 @@
 
 namespace fake_twitter::manager {
 
-    class IUserManager: public IManager {
+    class ILikeManager: public IManager {
     public:
-        virtual ~IUserManager() = 0;
+        virtual ~ILikeManager() = 0;
         virtual bool like(const PKey& user_id, const PKey& twitt_id) = 0;
         virtual bool unlike(const PKey& user_id, const PKey& twitt_id) = 0;
     };
