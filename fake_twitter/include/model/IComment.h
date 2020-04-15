@@ -4,8 +4,7 @@
 #include <string>
 #include <memory>
 
-#include "IUser.h"
-#include "ITwitt.h"
+#include "IModel.h"
 
 namespace fake_twitter {
 namespace model {

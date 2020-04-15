@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.17)
 project(fake_twitter LANGUAGES CXX)
 
 add_subdirectory(fake_twitter)
