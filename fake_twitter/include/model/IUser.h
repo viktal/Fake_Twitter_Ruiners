@@ -2,7 +2,7 @@
 
 #include <chrono>
 
-#include "fake_twitter/model/IModel.h"
+#include "IModel.h"
 
 namespace fake_twitter {
 namespace model {
@@ -11,6 +11,7 @@ class IUserManager;
 
 class IUser: IModel {
 public:
+    virtual ~IUser() = 0;
     virtual std::shared_ptr<IUserManager> manager() = 0;
 
     virtual const bool& is_authorized() = 0;

@@ -1,5 +1,8 @@
-add_library(include INTERFACE)
-target_include_directories(include INTERFACE include)
+set(SOURCES
+        src/BasicComment.cpp
+        src/Model.cpp
+        src/Tag.cpp
+        )
 
-add_executable(app app.cpp)
-target_link_libraries(app include)
+add_library(fake_twitter STATIC ${SOURCES})
+target_include_directories(fake_twitter PUBLIC include)
