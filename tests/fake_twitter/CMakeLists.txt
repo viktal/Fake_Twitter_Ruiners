@@ -17,3 +17,8 @@ add_executable(test_user test_user.cpp)
 target_compile_options(test_user PRIVATE -fprofile-arcs -ftest-coverage)
 target_link_libraries(test_user fake_twitter gmock_main gcov)
 add_test(NAME test_user COMMAND test_user)
+
+add_executable(test_comment test_comment.cpp)
+target_compile_options(test_comment PRIVATE -fprofile-arcs -ftest-coverage)
+target_link_libraries(test_comment fake_twitter gmock_main gcov)
+add_test(NAME test_comment COMMAND test_comment)

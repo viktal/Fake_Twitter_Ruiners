@@ -5,7 +5,7 @@
 #include <memory>
 
 #include "IUser.h"
-#include "ITwitt.h"
+#include "ITwit.h"
 
 namespace fake_twitter {
 namespace model {

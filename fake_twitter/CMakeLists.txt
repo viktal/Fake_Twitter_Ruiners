@@ -11,6 +11,8 @@ set(SOURCES
         src/manager/IManager.cpp
 
         src/model/BasicTwit.cpp
+        src/model/BasicComment.cpp
+        src/model/Tag.cpp
         src/model/IModel.cpp
         src/model/BasicUser.cpp
         src/model/ITwit.cpp
