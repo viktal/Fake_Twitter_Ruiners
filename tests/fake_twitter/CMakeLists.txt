@@ -13,6 +13,16 @@ target_compile_options(test_view_body PRIVATE -fprofile-arcs -ftest-coverage)
 target_link_libraries(test_view_body fake_twitter gmock_main gcov)
 add_test(NAME test_view_body COMMAND test_view_body)
 
+add_executable(test_view_profile test_view_profile.cpp)
+target_compile_options(test_view_profile PRIVATE -fprofile-arcs -ftest-coverage)
+target_link_libraries(test_view_profile fake_twitter gmock_main gcov)
+add_test(NAME test_view_profile COMMAND test_view_profile)
+
+add_executable(test_view_navbar test_view_navbar.cpp)
+target_compile_options(test_view_navbar PRIVATE -fprofile-arcs -ftest-coverage)
+target_link_libraries(test_view_navbar fake_twitter gmock_main gcov)
+add_test(NAME test_view_navbar COMMAND test_view_navbar)
+
 add_executable(test_user test_user.cpp)
 target_compile_options(test_user PRIVATE -fprofile-arcs -ftest-coverage)
 target_link_libraries(test_user fake_twitter gmock_main gcov)

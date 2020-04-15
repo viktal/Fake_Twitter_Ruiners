@@ -7,9 +7,13 @@ namespace fake_twitter::view {
 
 class Navbar: public IView {
 public:
+    Navbar(std::shared_ptr<const model::IUser>&);
     ~Navbar() = default;
-    Navbar(const IUser&);
-    HTML html() override;
+    HTML render() override;
+
+private:
+    std::shared_ptr<const model::IUser> user_;
 };
+
 
 } // fake_twitter::view

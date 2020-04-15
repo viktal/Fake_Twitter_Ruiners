@@ -19,6 +19,8 @@ set(SOURCES
         src/model/IUser.cpp
 
         src/view/Body.cpp
+        src/view/Profile.cpp
+        src/view/Navbar.cpp
         src/view/MainPageBuilder.cpp
         src/view/IView.cpp
 )
