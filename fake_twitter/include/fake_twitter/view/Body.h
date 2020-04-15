@@ -4,8 +4,7 @@
 #include "fake_twitter/view/IView.h"
 #include "fake_twitter/model/IUser.h"
 
-namespace fake_twitter {
-namespace view {
+namespace fake_twitter::view {
 
 class Body : public IView {
 public:
@@ -17,5 +16,4 @@ private:
     std::shared_ptr<const model::IUser> user_;
 };
 
-} //view
-} //fake_twitter
+} //fake_twitter::view

@@ -12,7 +12,6 @@ public:
     RightMenu(std::shared_ptr<const model::IUser>&);
     ~RightMenu() override = default;
     HTML render() override;
-
 private:
     std::shared_ptr<const model::IUser> user_;
 };

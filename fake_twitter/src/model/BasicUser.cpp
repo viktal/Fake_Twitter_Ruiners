@@ -33,7 +33,7 @@ void BasicUser::login(std::string login) {
     login_=login;
 }
 
-const fake_twitter::PasswordHash& BasicUser::passwordHash()() {
+const fake_twitter::PasswordHash& BasicUser::passwordHash() {
     return passwordHash_;
 }
 
@@ -41,7 +41,7 @@ void BasicUser::passwordHash(fake_twitter::PasswordHash passwordHash) {
     passwordHash_=passwordHash;
 }
 
-const fake_twitter::Avatar& BasicUser::avatar()() {
+const fake_twitter::Avatar& BasicUser::avatar() {
     return avatar_;
 }
 

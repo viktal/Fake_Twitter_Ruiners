@@ -11,8 +11,8 @@ NewsFeed::NewsFeed(std::shared_ptr<manager::ITwitManager> tmngr, std::shared_ptr
 }
 
 fake_twitter::HTML NewsFeed::process(const PKey& userId) {
-    auto user = userManager->load(userId);
-    auto followers = userManager->followers(user->id());
+    auto user = userManager->loadByKey(userId);
+//    auto followers = userManager->(user->id());
     return view::MainPageBuilder().navbar("")
                                   .leftMenu("")
                                   .rightMenu("")

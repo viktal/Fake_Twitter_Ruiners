@@ -13,7 +13,7 @@ public:
             const std::string& body,
             const Date& date,
             const PKey* retwetedFrom
-    ) override;
+    ) override {return nullptr;};
     std::unique_ptr<model::ITwit> load(const PKey& key) override;
     void update(std::shared_ptr<model::ITwit> twit) override;
 

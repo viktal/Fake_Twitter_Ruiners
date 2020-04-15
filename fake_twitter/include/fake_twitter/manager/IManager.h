@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include "fake_twitter/db/IDBEngine.h"
 
 namespace fake_twitter::manager {

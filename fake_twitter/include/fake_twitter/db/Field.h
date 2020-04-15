@@ -4,8 +4,9 @@
 
 namespace fake_twitter::db {
 
-class Field final {
+class Field {
 public:
+    Field() = default;
     Field(std::string&& rawresult);
 
     template<typename T>

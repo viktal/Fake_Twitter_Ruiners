@@ -5,27 +5,6 @@
 
 using namespace fake_twitter::model;
 
-//template <class Twit>
-//class test_twit {
-//public:
-//    std::chrono::time_point<std::chrono::system_clock> createDate = std::chrono::system_clock::now();
-//    ITwit* twit = new Twit(123456, 789456, "body", createDate, nullptr);
-//                      //PKey twit, PKey author
-//};
-//
-//typedef testing::Types<ITwit> definitionITwit;
-//
-//TYPED_TEST_SUITE(test_twit, definitionITwit);
-//TYPED_TEST(test_twit, unit_test1) {
-//    EXPECT_EQ(this->twit->author(), 789456);
-//    EXPECT_EQ(this->twit->id(), 123456);
-//    EXPECT_STREQ(this->twit->body(), "body");
-//    EXPECT_EQ(this->twit->date() - this->createDate, 0);
-//
-//    auto twit1 = new BasicTwit (123, "body", this->createDate, nullptr);
-//
-//}
-
 
 class test_f_for_twit: public ::testing::Test {
 public:
