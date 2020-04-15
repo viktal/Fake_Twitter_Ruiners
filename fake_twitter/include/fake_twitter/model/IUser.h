@@ -1,15 +1,22 @@
 #pragma once
 
 #include <chrono>
+#include <memory>
+
 
 #include "fake_twitter/model/IModel.h"
 #include "fake_twitter/common.h"
 
-namespace fake_twitter::model {
+namespace fake_twitter {
+namespace model {
 
-class IUser: public IModel {
+class IUserManager;
+
+class IUser: IModel {
 public:
     virtual ~IUser() = 0;
+    virtual const std::shared_ptr<IUserManager> manager() = 0;
+
     virtual const bool& is_authorized() = 0;
     virtual void is_authorized(bool) = 0;
 
@@ -24,6 +31,16 @@ public:
 
     virtual const Avatar& avatar() = 0;
     virtual void avatar(Avatar) = 0;
+
+    virtual const Date& regDate() = 0;
+    virtual void regDate(Date) = 0;
+
+    virtual const size_t& countFollow() = 0;
+    virtual void countFollow(size_t) = 0;
+
+    virtual const size_t& countFollower() = 0;
+    virtual void countFollower(size_t) = 0;
 };
 
-} // fake_twitter::model
+} // model
+} // fake_twitter
