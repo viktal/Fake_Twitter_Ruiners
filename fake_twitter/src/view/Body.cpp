@@ -9,5 +9,5 @@ Body::Body(std::shared_ptr<const model::IUser> &) {
 }
 
 HTML Body::render() {
-    return fake_twitter::HTML();
+    return "";
 }
