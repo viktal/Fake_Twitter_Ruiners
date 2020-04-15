@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "fake_twitter/model/IUser.h"
 #include <chrono>
-#include "fake_twitter/manager/BasicUser.h"
+#include "fake_twitter/model/BasicUser.h"
 
 using namespace fake_twitter::model;
 
@@ -9,20 +9,20 @@ using namespace fake_twitter::model;
 class test_f_for_user: public ::testing::Test {
 public:
     std::chrono::time_point<std::chrono::system_clock> createDate = std::chrono::system_clock::now();
-    BasicUser *user = new BasicUser (1, true, "name", "login", 123, "default", createDate, 0, 0);
+    BasicUser *user = new BasicUser (1, true, "name", "login", 123, "avatar", createDate, 0, 0);
 
 };
 
-TEST_F(test_f_for_user, unit_test1) {
+/*TEST_F(test_f_for_user, unit_test1) {
     EXPECT_EQ(this->user->id(), 1);
-    /*EXPECT_EQ(this->user->is_authorized(), true);
-    EXPECT_EQ(this->user->name(), "name");
-    EXPECT_EQ(this->user->login(), "login");
-    EXPECT_EQ(this->user->passwordHash(), 123);
-    EXPECT_EQ(this->user->avatar(), "avatar");
-    int difference = std::chrono::duration_cast<std::chrono::seconds>
-            (this->user->regDate()-this->createDate).count();
-    EXPECT_EQ( difference, 0);*/
+    //EXPECT_EQ(this->user->is_authorized(), true);
+    //EXPECT_EQ(this->user->name(), "name");
+    //EXPECT_EQ(this->user->login(), "login");
+    //EXPECT_EQ(this->user->passwordHash(), 123);
+    //EXPECT_EQ(this->user->avatar(), "avatar");
+    //int difference = std::chrono::duration_cast<std::chrono::seconds>
+    //        (this->user->regDate()-this->createDate).count();
+    //EXPECT_EQ( difference, 0);
 }
 
 

@@ -61,7 +61,7 @@ const size_t& BasicUser::countFollow() {
     return countFollow_;
 }
 
-void BasicUser::retwitCount(size_t countFollow) {
+void BasicUser::countFollow(size_t countFollow) {
     countFollow_=countFollow;
 }
 
@@ -69,7 +69,7 @@ const size_t& BasicUser::countFollower() {
     return countFollower_;
 }
 
-void BasicUser::retwitCount(size_t countFollower) {
+void BasicUser::countFollower(size_t countFollower) {
     countFollower_=countFollower;
 }
 
@@ -78,14 +78,14 @@ fake_twitter::PKey BasicUser::id() {
 }
 
 BasicUser::BasicUser(fake_twitter::PKey id, bool is_authorized, std::string name, std::string login, fake_twitter::PasswordHash passwordHash,
-                     fake_twitter::Avatar avatar, fake_twitter::Date regDate, size_t countFolow, size_t countFolower) {
+                     fake_twitter::Avatar avatar, fake_twitter::Date regDate, size_t countFollow, size_t countFollower) {
     id_ = id;
     is_authorized_ = is_authorized;
     name_ = std::move(name);
-    login_ = std::move(logn);
+    login_ = std::move(login);
     passwordHash_ = passwordHash;
     avatar_ = std::move(avatar);
-    date_ = date;
+    regDate_ = regDate;
     countFollow_ = countFollow;
     countFollower_ = countFollower;
 }

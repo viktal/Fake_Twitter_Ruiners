@@ -11,7 +11,7 @@ namespace model {
 
 class BasicUser : public IUser {
 public:
-    BasicUser (PKey id, bool is_authorized, std::string name, std::string login, PasswordHash& passwordHash, Avatar& avatar, Date regDate, size_t countFolow, size_t countFolower);
+    BasicUser (PKey id, bool is_authorized, std::string name, std::string login, PasswordHash passwordHash, Avatar avatar, Date regDate, size_t countFollow, size_t countFollower);
 
     ~BasicUser() override = default;
 
@@ -35,11 +35,11 @@ public:
     const Date& regDate() override;
     void regDate(Date) override;
 
-    const size_t& countFolow() override;
-    void countFolow(size_t) override;
+    const size_t& countFollow() override;
+    void countFollow(size_t) override;
 
-    const size_t& countFolower() override;
-    void countFolower(size_t) override;
+    const size_t& countFollower() override;
+    void countFollower(size_t) override;
 
     PKey id() override;
 
@@ -48,11 +48,11 @@ private:
     bool is_authorized_;
     std::string name_;
     std::string login_;
-    PasswordHash passwordHash;
-    Avatar avatar;
+    PasswordHash passwordHash_;
+    Avatar avatar_;
     Date regDate_;
     size_t countFollow_;
-    size_t countFollow_;
+    size_t countFollower_;
 };
 
 } // model
