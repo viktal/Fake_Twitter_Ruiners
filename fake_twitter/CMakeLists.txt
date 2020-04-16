@@ -1,22 +1,10 @@
 set(SOURCES
-        src/controller/NewsFeed.cpp
-        src/controller/IController.cpp
-
         src/db/Field.cpp
 
-        src/manager/SimpleSchemaUserManager.cpp
-        src/manager/SimpleSchemaTwitManager.cpp
+        src/manager/UserManager.cpp
+        src/manager/TwitManager.cpp
         src/manager/ITwitManager.cpp
-        src/manager/LikeManager.cpp
         src/manager/IManager.cpp
-
-        src/model/BasicTwit.cpp
-        src/model/BasicComment.cpp
-        src/model/Tag.cpp
-        src/model/IModel.cpp
-        src/model/BasicUser.cpp
-        src/model/ITwit.cpp
-        src/model/IUser.cpp
 
         src/view/Body.cpp
         src/view/Profile.cpp

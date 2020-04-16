@@ -6,13 +6,12 @@
 namespace fake_twitter {
     namespace manager {
 
-        class ITag;
-
         class ITagManager : IManager {
         public:
             virtual ~ITagManager() = 0;
-            virtual ITag create(const std::string& title) = 0;
-            virtual ITwit* SearchTag(const std::string& title) = 0;
+            Tag create(const std::string& title) = 0;
+            virtual Twit* SearchTag(const std::string& title) = 0;
+            // virtual Twit* SearchTag(const std::string& title, size_t count) = 0;
         };
 
     } // manager

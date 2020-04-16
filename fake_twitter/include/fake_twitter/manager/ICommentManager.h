@@ -6,15 +6,13 @@
 namespace fake_twitter {
 namespace manager {
 
-class IComment;
-
 class ICommentManager : IManager {
 public:
     virtual ~ICommentManager() = 0;
-    virtual IComment create(const PKey& author, const std::string& body, const Date& date, const PKey* Original) = 0;
-    virtual IComment* loadByKey(const PKey& key) = 0;
-    virtual void update(const IComment& comment) = 0;
-    virtual void drop(const IComment& comment) = 0;
+    virtual  std::unique_ptr<model::Comment> create(PKey author, const std::string& body, const Date& date, PKey Original) = 0;
+    virtual std::unique_ptr<model::Comment> loadByKey(PKey key) = 0;
+    virtual void update(const model::Comment& comment) = 0;
+    virtual void drop(const model::Comment& comment) = 0;
 };
 
 } // manager

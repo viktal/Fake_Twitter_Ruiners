@@ -5,7 +5,7 @@
 
 namespace fake_twitter {
 
-using PasswordHash = int;
+using PasswordHash = std::string;
 using Avatar = std::string;
 using PKey = int;
 using Date = std::chrono::time_point<std::chrono::system_clock>;
